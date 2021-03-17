@@ -5,61 +5,53 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Formiliar</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>FAML Forms Prototype</h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <p className={styles.description}>Let's do a fake form together!</p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={styles.card}>
+            <h3>Name</h3>
+            <p>Full name (including middle names).</p>
+            <input type="text" />
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <div className={styles.card}>
+            <h3>Email</h3>
+            <p>Please provide a legitimate email address.</p>
+            <input type="email" />
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <div className={styles.card}>
+            <h3>Age</h3>
+            <p>How old are you? Must be over 18.</p>
+            <input type="number" />
+          </div>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+          <div className={styles.card}>
+            <h3>Money Laundered</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Amount of money you've successfully laundered in your lifetime.
             </p>
-          </a>
+            <input
+              className={styles.slider}
+              type="range"
+              min="0"
+              max="1000000"
+            />
+          </div>
+
+          <div className={styles.card}>
+            <button className={styles.submit}>Submit &rarr;</button>
+            <button className={styles.cancel}>Cancel</button>
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
