@@ -9,15 +9,13 @@ export default function Home() {
   const router = useRouter()
   const { isFinished } = router.query
 
-  // eslint-disable-next-line no-console
-  console.log('isFinished:', isFinished)
-
   useEffect(() => {
     isFinished &&
       toast.notify('All done. Celebrate with a ☕!', {
         position: 'top',
         title: 'Success!',
       })
+    router.replace('/')
   }, [isFinished])
 
   return (
@@ -25,12 +23,13 @@ export default function Home() {
       <Head>
         <title>Formiliar - Home</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:lang" content="en" key="lang" />
       </Head>
 
       <ToastContainer position={'top'} />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>FAML Forms Prototype</h1>
+        <h1 className={styles.title}>NextJS Forms Prototype</h1>
 
         <p className={styles.description}>Let's do a fake form together!</p>
 
