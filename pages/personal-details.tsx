@@ -19,8 +19,8 @@ export default function PersonalDetails() {
   const router = useRouter()
 
   const onSubmit = (data) => {
-    console.log('data:', data)
-    router.push('/')
+    console.log('Submitted data:', data)
+    router.push('/photos')
   }
 
   console.log('errors:', errors)
@@ -39,7 +39,9 @@ export default function PersonalDetails() {
       <main className={styles.main}>
         <h1 className={styles.title}>Personal Details</h1>
 
-        <p className={styles.description}>Please give us data we are hungry.</p>
+        <p className={styles.description}>
+          <b>Step 1</b>: Please give us data we are hungry.
+        </p>
 
         <div className={styles.grid}>
           <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>

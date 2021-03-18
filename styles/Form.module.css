@@ -42,6 +42,7 @@
 }
 
 .card {
+  background-color: white;
   margin: 1rem;
   flex-basis: 100%;
   padding: 1.5rem;
@@ -128,6 +129,18 @@
   left: 50px;
   font-size: 50px;
   cursor: pointer;
+}
+
+.camera,
+.image {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  max-width: 100%;
+  width: 100%;
+}
+
+.wallpaper {
+  margin-top: 20px;
 }
 
 @media (max-width: 600px) {
